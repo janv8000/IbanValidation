@@ -1,6 +1,6 @@
 # IbanValidation
 
-[![Build status](https://ci.appveyor.com/api/projects/status/2vn195i624lpd8cw/branch/feature/new-iban-countrycodes?svg=true)](https://ci.appveyor.com/project/PaddoSwam/ibanvalidation/branch/feature/new-iban-countrycodes)
+[![Build status](https://ci.appveyor.com/api/projects/status/lweml30irx0ad7vs/branch/master?svg=true)](https://ci.appveyor.com/project/janv8000/ibanvalidation/branch/master)
 
 Provides IBAN bank account number validation.
 
