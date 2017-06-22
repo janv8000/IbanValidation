@@ -14,3 +14,4 @@ IbanValidation.TestFixtures/bin/
 !**/packages/build/
 # and repositories.config
 !**/packages/repositories.config
+**/*.suo
