@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>IbanValidation</id>
-        <version>1.0.0</version>
+        <version>$version$</version>
         <authors>Jan Verhaeghe</authors>
         <owners>Jan Verhaeghe</owners>
         <licenseUrl>https://github.com/janv8000/IbanValidation/blob/master/LICENSE</licenseUrl>
@@ -11,10 +11,7 @@
         <description>Provides IBAN bank account number validation.
 
 https://en.wikipedia.org/wiki/International_Bank_Account_Number</description>
-        <releaseNotes>Initial release</releaseNotes>
+        <releaseNotes>New IBAN countrycodes added (credits: @PaddoSwam)</releaseNotes>
+        <tags>IBAN SEPA</tags>
     </metadata>
-    <files>
-        <file src="lib\net45\IbanValidation.dll" target="lib\net45\IbanValidation.dll" />
-        <file src="lib\net45\IbanValidation.pdb" target="lib\net45\IbanValidation.pdb" />
-    </files>
 </package>
