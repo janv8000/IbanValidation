@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework> 
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks> 
     <Product>IbanValidation</Product> 
     <Description>Provides IBAN bank account number validation.
     
 https://en.wikipedia.org/wiki/International_Bank_Account_Number</Description> 
     <Copyright>Copyright janv8000 © 2017</Copyright> 
     <Authors>Jan Verhaeghe</Authors> 
-    <Version>1.1.0</Version> 
+    <Version>1.1.1</Version> 
     <PackageLicenseUrl>https://github.com/janv8000/IbanValidation/blob/master/LICENSE</PackageLicenseUrl> 
     <PackageProjectUrl>https://github.com/janv8000/IbanValidation</PackageProjectUrl> 
     <PackageTags>IBAN SEPA</PackageTags>

@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>net45</TargetFramework>
     <Product>IbanValidation.TestFixtures</Product> 
     <Description>Test IBAN bank account number validation.</Description> 
     <Copyright>Copyright janv8000 © 2017</Copyright> 
