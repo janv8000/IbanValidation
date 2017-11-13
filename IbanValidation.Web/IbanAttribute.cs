@@ -2,22 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace IbanValidation.Web
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false)]
-    public sealed class IbanAttribute : ValidationAttribute, IClientValidatable
+    public sealed class IbanAttribute : ValidationAttribute, IClientModelValidator
     {
         public override bool IsValid(object value)
         {
-            if (value == null)
-            {
-                return true;
-            }
-
-            var valueAsAString = value as string;
-            if (valueAsAString == null)
+            if (!(value is string valueAsAString))
             {
                 return true;
             }
@@ -36,9 +30,24 @@ namespace IbanValidation.Web
             return false;
         }
 
-        public IEnumerable<ModelClientValidationRule> GetClientValidationRules(ModelMetadata metadata, ControllerContext context)
+        public void AddValidation(ClientModelValidationContext context)
         {
-            yield return new ModelClientValidationRule { ErrorMessage = FormatErrorMessage(metadata.DisplayName), ValidationType = "ibancheck" };
+            MergeAttribute(context.Attributes, "data-val", "true");
+            var errorMessage = FormatErrorMessage(context.ModelMetadata.GetDisplayName());
+            MergeAttribute(context.Attributes, "data-val-ibancheck", errorMessage);
+        }
+
+        private bool MergeAttribute(
+            IDictionary<string, string> attributes,
+            string key,
+            string value)
+        {
+            if (attributes.ContainsKey(key))
+            {
+                return false;
+            }
+            attributes.Add(key, value);
+            return true;
         }
     }
 }

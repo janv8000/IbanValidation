@@ -16,3 +16,5 @@ IbanValidation.TestFixtures/bin/
 !**/packages/repositories.config
 **/*.suo
 .vs/
+.vscode/
+
