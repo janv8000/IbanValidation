@@ -4,14 +4,16 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Product>IbanValidation</Product>
     <Description>Provides IBAN bank account number validation.
-    
-https://en.wikipedia.org/wiki/International_Bank_Account_Number</Description> 
-    <Copyright>Copyright janv8000 © 2018</Copyright> 
-    <Authors>Jan Verhaeghe &amp; contributors</Authors> 
-    <Version>2.0.0</Version> 
-    <PackageLicenseUrl>https://github.com/janv8000/IbanValidation/blob/master/LICENSE</PackageLicenseUrl> 
-    <PackageProjectUrl>https://github.com/janv8000/IbanValidation</PackageProjectUrl> 
+      https://en.wikipedia.org/wiki/International_Bank_Account_Number</Description>
+    <Copyright>Copyright janv8000 © 2018</Copyright>
+    <Authors>Jan Verhaeghe &amp; contributors</Authors>
+    <Version>2.0.0</Version>
+    <PackageProjectUrl>https://github.com/janv8000/IbanValidation</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageTags>IBAN SEPA</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
 </Project>
