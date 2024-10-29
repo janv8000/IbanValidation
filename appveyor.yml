@@ -1,16 +1,25 @@
-version: 1.0.{build}
+version: '2.0.{build}'
+image: Visual Studio 2022
+configuration: Release
+nuget:
+  disable_publish_on_pr: true
+build_script:
+  - pwsh: >-
+      dotnet build
+      dotnet test
+      dotnet pack
 build:
   publish_nuget: true
   publish_nuget_symbols: true
   verbosity: minimal
 deploy:
-- provider: NuGet
-  api_key:
-    secure: SEChBcrcncyPpcBR16gHZgXndto32LUGPhpC69rNSr8cw+2Yag+FblolQCuigsYDg7thvemFN8xu7mYXRevNUhAU7hsOp/OxupKiafCssgg=
-  on:
-    branch: master
+  - provider: NuGet
+    api_key:
+      secure: /8hr8EaHo/E8hYNwJ6/AwLxAqTv8OSLqeMnVSMKEqiK2mB3Jlt2llz/z7Ih3sQdR
+    on:
+      branch: master
 notifications:
-- provider: GitHubPullRequest
-  on_build_success: false
-  on_build_failure: true
-  on_build_status_changed: true
+  - provider: GitHubPullRequest
+    on_build_success: false
+    on_build_failure: true
+    on_build_status_changed: true
