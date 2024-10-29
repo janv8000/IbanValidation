@@ -21,9 +21,7 @@ namespace IbanValidation
 
             var countryCode = value.Substring(0, 2).ToUpper();
 
-            int lengthForCountryCode;
-
-            var countryCodeKnown = _lengths.TryGetValue(countryCode, out lengthForCountryCode);
+            var countryCodeKnown = Lengths.TryGetValue(countryCode, out var lengthForCountryCode);
             if (!countryCodeKnown)
             {
                 return IbanValidationResult.CountryCodeNotKnown;
@@ -55,7 +53,7 @@ namespace IbanValidation
             return IbanValidationResult.IsValid;
         }
 
-        private static readonly Dictionary<string, int> _lengths = new Dictionary<string, int>
+        private static readonly Dictionary<string, int> Lengths = new Dictionary<string, int>
         {
             { "AD", 24 }, //	Andorra
             { "AE", 23 }, //	United Arab Emirates

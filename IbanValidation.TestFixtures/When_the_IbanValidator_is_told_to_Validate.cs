@@ -2,6 +2,7 @@
 
 namespace IbanValidation.TestFixtures
 {
+    // ReSharper disable once InconsistentNaming
     public class When_the_IbanValidator_is_told_to_Validate
     {
         [Test]
