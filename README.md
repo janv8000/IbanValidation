@@ -9,4 +9,3 @@ See [International Bank Account Number](https://en.wikipedia.org/wiki/Internatio
 ## NuGet packages ##
 
 - [IbanValidation](https://www.nuget.org/packages/IbanValidation/)
-- [IbanValidation.Web](https://www.nuget.org/packages/IbanValidation.Web/)
