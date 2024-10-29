@@ -90,6 +90,7 @@ namespace IbanValidation
             { "FR", 27 }, //	France
             { "GB", 22 }, //	Great Britain
             { "GE", 22 }, //	Georgia
+            { "GH", 27 }, //	Ghana
             { "GI", 23 }, //	Gibraltar
             { "GL", 18 }, //	Greenland
             { "GR", 27 }, //	Greece
@@ -123,8 +124,10 @@ namespace IbanValidation
             { "MT", 31 }, //	Malta
             { "MU", 30 }, //	Mauritius
             { "MZ", 25 }, //	Mozambique
+            { "NG", 10 }, //	Nigeria
             { "NL", 18 }, //	Netherlands
             { "NO", 15 }, //	Norway
+            { "NZ", 23 }, //	New Zealand
             { "PK", 24 }, //	Pakistan
             { "PL", 28 }, //	Poland
             { "PS", 29 }, //	Palestinian Territory
@@ -132,8 +135,10 @@ namespace IbanValidation
             { "QA", 29 }, //	Qatar
             { "RO", 24 }, //	Romania
             { "RS", 22 }, //	Serbia
+            { "RU", 33 }, //	the Russian Federation
             { "SA", 24 }, //	Saudi Arabia
             { "SC", 31 }, //	Seychelles
+            { "SD", 18 }, //	Sudan (the)
             { "SE", 24 }, //	Sweden
             { "SI", 19 }, //	Slovenia
             { "SK", 24 }, //	Slovakia
