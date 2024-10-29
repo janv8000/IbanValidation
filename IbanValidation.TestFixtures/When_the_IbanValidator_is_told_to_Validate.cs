@@ -78,7 +78,7 @@ namespace IbanValidation.TestFixtures
         public void It_should_return_an_error_when_an_unkown_country_prefix_used()
         {
             // Assert
-            const string value = "XX82WEST12345698765432";
+            const string value = "__XX82WEST12345698765432"; // Use *illegal* characters so it can never be a valid country code.
             var validator = new IbanValidator();
 
             // Act
