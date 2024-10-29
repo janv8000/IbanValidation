@@ -15,7 +15,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.ValueMissing, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.ValueMissing));
         }
 
         [Test]
@@ -29,7 +29,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.ValueMissing, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.ValueMissing));
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.ValueTooSmall, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.ValueTooSmall));
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.ValueTooBig, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.ValueTooBig));
         }
 
         [Test]
@@ -71,7 +71,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.ValueFailsModule97Check, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.ValueFailsModule97Check));
         }
 
         [Test]
@@ -85,7 +85,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.CountryCodeNotKnown, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.CountryCodeNotKnown));
         }
 
         [Test]
@@ -99,7 +99,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.IsValid, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.IsValid));
         }
 
         [Test]
@@ -113,7 +113,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(value);
 
             // Assert
-            Assert.That(IbanValidationResult.IsValid, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.IsValid));
         }
 
         [TestCase("Albania", "AL47212110090000000235698741")]
@@ -215,7 +215,7 @@ namespace IbanValidation.TestFixtures
             var result = validator.Validate(iban);
 
             // Assert
-            Assert.That(IbanValidationResult.IsValid, Is.EqualTo(result));
+            Assert.That(result, Is.EqualTo(IbanValidationResult.IsValid));
         }
     }
 }
